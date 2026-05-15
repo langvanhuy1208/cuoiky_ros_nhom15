@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="xecuahuy_full_furniture">
+    <include><uri>model://ground_plane</uri></include>
+    <include><uri>model://sun</uri></include>
+
+    <model name="wall_n"><static>true</static><pose>0 5 0.6 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>14.15 0.15 1.2</size></box></geometry><material><ambient>0.9 0.9 0.9 1</ambient></material></visual>
+      <collision name="c"><geometry><box><size>14.15 0.15 1.2</size></box></geometry></collision></link></model>
+    <model name="wall_s"><static>true</static><pose>0 -5 0.6 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>14.15 0.15 1.2</size></box></geometry><material><ambient>0.9 0.9 0.9 1</ambient></material></visual>
+      <collision name="c"><geometry><box><size>14.15 0.15 1.2</size></box></geometry></collision></link></model>
+    <model name="wall_e"><static>true</static><pose>7 0 0.6 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>0.15 10.15 1.2</size></box></geometry><material><ambient>0.9 0.9 0.9 1</ambient></material></visual>
+      <collision name="c"><geometry><box><size>0.15 10.15 1.2</size></box></geometry></collision></link></model>
+    <model name="wall_w"><static>true</static><pose>-7 0 0.6 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>0.15 10.15 1.2</size></box></geometry><material><ambient>0.9 0.9 0.9 1</ambient></material></visual>
+      <collision name="c"><geometry><box><size>0.15 10.15 1.2</size></box></geometry></collision></link></model>
+
+
+    <model name="wall_hl_l_top"><static>true</static><pose>-2 3.25 0.6 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>0.12 3.5 1.2</size></box></geometry></visual><collision name="c"><geometry><box><size>0.12 3.5 1.2</size></box></geometry></collision></link></model>
+    <model name="wall_hl_l_bot"><static>true</static><pose>-2 -3.25 0.6 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>0.12 3.5 1.2</size></box></geometry></visual><collision name="c"><geometry><box><size>0.12 3.5 1.2</size></box></geometry></collision></link></model>
+
+    <model name="wall_hl_r_top"><static>true</static><pose>2 3.25 0.6 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>0.12 3.5 1.2</size></box></geometry></visual><collision name="c"><geometry><box><size>0.12 3.5 1.2</size></box></geometry></collision></link></model>
+    <model name="wall_hl_r_bot"><static>true</static><pose>2 -3.25 0.6 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>0.12 3.5 1.2</size></box></geometry></visual><collision name="c"><geometry><box><size>0.12 3.5 1.2</size></box></geometry></collision></link></model>
+    <!-- Ngăn giữa các phòng -->
+    <model name="wall_rooms_l"><static>true</static><pose>-4.5 0 0.6 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>5.0 0.12 1.2</size></box></geometry></visual><collision name="c"><geometry><box><size>5.0 0.12 1.2</size></box></geometry></collision></link></model>
+    <model name="wall_rooms_r"><static>true</static><pose>4.5 0 0.6 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>5.0 0.12 1.2</size></box></geometry></visual><collision name="c"><geometry><box><size>5.0 0.12 1.2</size></box></geometry></collision></link></model>
+
+    <model name="bed1"><static>true</static><pose>-4.5 4.0 0.25 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>2.0 1.8 0.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient></material></visual><collision name="c"><geometry><box><size>2.0 1.8 0.5</size></box></geometry></collision></link></model>
+    
+    <model name="bed2"><static>true</static><pose>-4.5 -4.0 0.25 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>2.0 1.8 0.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient></material></visual><collision name="c"><geometry><box><size>2.0 1.8 0.5</size></box></geometry></collision></link></model>
+
+  
+    <model name="sofa_long"><static>true</static><pose>5.5 4.5 0.3 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>2.6 0.8 0.6</size></box></geometry><material><ambient>0.3 0.4 0.6 1</ambient></material></visual><collision name="c"><geometry><box><size>2.6 0.8 0.6</size></box></geometry></collision></link></model>
+    <model name="sofa_short"><static>true</static><pose>6.4 3.4 0.3 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>0.8 1.4 0.6</size></box></geometry><material><ambient>0.3 0.4 0.6 1</ambient></material></visual><collision name="c"><geometry><box><size>0.8 1.4 0.6</size></box></geometry></collision></link></model>
+    
+    <model name="tv_stand"><static>true</static><pose>2.5 3.5 0.35 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>0.6 2.0 0.7</size></box></geometry><material><ambient>0.2 0.2 0.2 1</ambient></material></visual><collision name="c"><geometry><box><size>0.6 2.0 0.7</size></box></geometry></collision></link></model>
+    
+    <model name="tv_screen"><static>true</static><pose>2.6 3.5 1.05 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>0.1 1.4 0.7</size></box></geometry><material><ambient>0.1 0.1 0.1 1</ambient></material></visual><collision name="c"><geometry><box><size>0.1 1.4 0.7</size></box></geometry></collision></link></model>
+
+    <model name="dining_table"><static>true</static><pose>3.5 -2.5 0.35 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>1.2 1.2 0.7</size></box></geometry><material><ambient>0.6 0.4 0.2 1</ambient></material></visual><collision name="c"><geometry><box><size>1.2 1.2 0.7</size></box></geometry></collision></link></model>
+    <model name="chair1"><static>true</static><pose>2.6 -2.5 0.25 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>0.4 0.4 0.5</size></box></geometry><material><ambient>0.7 0.7 0.7 1</ambient></material></visual><collision name="c"><geometry><box><size>0.4 0.4 0.5</size></box></geometry></collision></link></model>
+    <model name="chair2"><static>true</static><pose>4.4 -2.5 0.25 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>0.4 0.4 0.5</size></box></geometry><material><ambient>0.7 0.7 0.7 1</ambient></material></visual><collision name="c"><geometry><box><size>0.4 0.4 0.5</size></box></geometry></collision></link></model>
+    <model name="chair3"><static>true</static><pose>3.5 -1.6 0.25 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>0.4 0.4 0.5</size></box></geometry><material><ambient>0.7 0.7 0.7 1</ambient></material></visual><collision name="c"><geometry><box><size>0.4 0.4 0.5</size></box></geometry></collision></link></model>
+    <model name="chair4"><static>true</static><pose>3.5 -3.4 0.25 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><box><size>0.4 0.4 0.5</size></box></geometry><material><ambient>0.7 0.7 0.7 1</ambient></material></visual><collision name="c"><geometry><box><size>0.4 0.4 0.5</size></box></geometry></collision></link></model>
+   
+  </world>
+</sdf>

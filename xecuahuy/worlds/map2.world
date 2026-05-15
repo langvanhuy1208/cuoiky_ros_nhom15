@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="industrial_warehouse_final_huy">
+    <include><uri>model://ground_plane</uri></include>
+    <include><uri>model://sun</uri></include>
+
+    <!-- ===== TƯỜNG BAO (CHỪA CỬA Ở PHÍA NAM) ===== -->
+    <model name="outer_walls">
+      <static>true</static>
+      <link name="walls">
+        <visual name="n"><pose>0 6 0.75 0 0 0</pose><geometry><box><size>15.3 0.2 1.5</size></box></geometry><material><ambient>0.3 0.3 0.3 1</ambient></material></visual>
+        <collision name="n_c"><pose>0 6 0.75 0 0 0</pose><geometry><box><size>15.3 0.2 1.5</size></box></geometry></collision>
+        
+        <!-- Tường Nam chia làm 2 đoạn để hở cửa 3m ở giữa -->
+        <visual name="s1"><pose>-4.5 -6 0.75 0 0 0</pose><geometry><box><size>6.3 0.2 1.5</size></box></geometry></visual>
+        <visual name="s2"><pose>4.5 -6 0.75 0 0 0</pose><geometry><box><size>6.3 0.2 1.5</size></box></geometry></visual>
+        <collision name="s1_c"><pose>-4.5 -6 0.75 0 0 0</pose><geometry><box><size>6.3 0.2 1.5</size></box></geometry></collision>
+        <collision name="s2_c"><pose>4.5 -6 0.75 0 0 0</pose><geometry><box><size>6.3 0.2 1.5</size></box></geometry></collision>
+        
+        <visual name="e"><pose>7.5 0 0.75 0 0 0</pose><geometry><box><size>0.2 12 1.5</size></box></geometry></visual>
+        <collision name="e_c"><pose>7.5 0 0.75 0 0 0</pose><geometry><box><size>0.2 12 1.5</size></box></geometry></collision>
+        <visual name="w"><pose>-7.5 0 0.75 0 0 0</pose><geometry><box><size>0.2 12 1.5</size></box></geometry></visual>
+        <collision name="w_c"><pose>-7.5 0 0.75 0 0 0</pose><geometry><box><size>0.2 12 1.5</size></box></geometry></collision>
+      </link>
+    </model>
+
+    <!-- ===== KỆ MỚI BÊN TRÁI (WEST RACK) ===== -->
+    <model name="left_rack">
+      <static>true</static>
+      <pose>-5 0 0 0 0 1.5708</pose>
+      <link name="link">
+        <visual name="l1"><pose>-2.5 0 0.75 0 0 0</pose><geometry><box><size>0.2 0.6 1.5</size></box></geometry><material><ambient>0 0.2 0.6 1</ambient></material></visual>
+        <collision name="l1_c"><pose>-2.5 0 0.75 0 0 0</pose><geometry><box><size>0.2 0.6 1.5</size></box></geometry></collision>
+        <visual name="l2"><pose>2.5 0 0.75 0 0 0</pose><geometry><box><size>0.2 0.6 1.5</size></box></geometry><material><ambient>0 0.2 0.6 1</ambient></material></visual>
+        <collision name="l2_c"><pose>2.5 0 0.75 0 0 0</pose><geometry><box><size>0.2 0.6 1.5</size></box></geometry></collision>
+        <visual name="beam"><pose>0 0 0.8 0 0 0</pose><geometry><box><size>5.2 0.6 0.05</size></box></geometry><material><ambient>1 0.4 0 1</ambient></material></visual>
+        <collision name="beam_c"><pose>0 0 0.8 0 0 0</pose><geometry><box><size>5.2 0.6 0.05</size></box></geometry></collision>
+        
+        <!-- Thùng hàng trên kệ trái -->
+        <visual name="box1"><pose>-1 0 1.05 0 0 0</pose><geometry><box><size>0.6 0.5 0.4</size></box></geometry><material><ambient>0.8 0.5 0.2 1</ambient></material></visual>
+        <collision name="box1_c"><pose>-1 0 1.05 0 0 0</pose><geometry><box><size>0.6 0.5 0.4</size></box></geometry></collision>
+        <visual name="box2"><pose>1 0 1.05 0 0 0</pose><geometry><box><size>0.6 0.5 0.4</size></box></geometry><material><ambient>0.8 0.5 0.2 1</ambient></material></visual>
+        <collision name="box2_c"><pose>1 0 1.05 0 0 0</pose><geometry><box><size>0.6 0.5 0.4</size></box></geometry></collision>
+      </link>
+    </model>
+
+    <!-- ===== KỆ GIỮA VỚI NHIỀU THÙNG HÀNG ===== -->
+    <model name="heavy_rack_middle">
+      <static>true</static>
+      <pose>1.5 1.5 0 0 0 0</pose>
+      <link name="link">
+        <visual name="l1"><pose>-3.5 0 0.75 0 0 0</pose><geometry><box><size>0.2 0.65 1.5</size></box></geometry><material><ambient>0 0.2 0.6 1</ambient></material></visual>
+        <visual name="l2"><pose>3.5 0 0.75 0 0 0</pose><geometry><box><size>0.2 0.65 1.5</size></box></geometry><material><ambient>0 0.2 0.6 1</ambient></material></visual>
+        <visual name="beam"><pose>0 0 0.8 0 0 0</pose><geometry><box><size>7.3 0.65 0.05</size></box></geometry><material><ambient>1 0.4 0 1</ambient></material></visual>
+        <collision name="beam_c"><pose>0 0 0.8 0 0 0</pose><geometry><box><size>7.3 0.65 0.05</size></box></geometry></collision>
+        
+        <!-- Xếp 3 thùng hàng lên kệ -->
+        <visual name="b1"><pose>-2 0 1.05 0 0 0</pose><geometry><box><size>0.8 0.5 0.5</size></box></geometry></visual>
+        <collision name="b1_c"><pose>-2 0 1.05 0 0 0</pose><geometry><box><size>0.8 0.5 0.5</size></box></geometry></collision>
+        <visual name="b2"><pose>0 0 1.05 0 0 0</pose><geometry><box><size>0.8 0.5 0.5</size></box></geometry></visual>
+        <collision name="b2_c"><pose>0 0 1.05 0 0 0</pose><geometry><box><size>0.8 0.5 0.5</size></box></geometry></collision>
+        <visual name="b3"><pose>2 0 1.05 0 0 0</pose><geometry><box><size>0.8 0.5 0.5</size></box></geometry></visual>
+        <collision name="b3_c"><pose>2 0 1.05 0 0 0</pose><geometry><box><size>0.8 0.5 0.5</size></box></geometry></collision>
+      </link>
+    </model>
+
+    <!-- ===== CÁC THÙNG HÀNG TẬP TRUNG GẦN CỬA (KHÔNG CHẶN CỬA) ===== -->
+    <model name="entry_cargo_cluster">
+      <static>true</static>
+      <pose>0 -4.5 0 0 0 0</pose>
+      <link name="cluster">
+        <!-- Cụm bên trái cửa -->
+        <visual name="c1"><pose>-2.5 0 0.3 0 0 0.4</pose><geometry><box><size>0.6 0.6 0.6</size></box></geometry><material><ambient>0.6 0.3 0.1 1</ambient></material></visual>
+        <collision name="c1_c"><pose>-2.5 0 0.3 0 0 0.4</pose><geometry><box><size>0.6 0.6 0.6</size></box></geometry></collision>
+        
+        <!-- C cụm bên phải cửa -->
+        <visual name="c2"><pose>2.5 0 0.3 0 0 -0.2</pose><geometry><box><size>0.7 0.7 0.7</size></box></geometry><material><ambient>0.6 0.3 0.1 1</ambient></material></visual>
+        <collision name="c2_c"><pose>2.5 0 0.3 0 0 -0.2</pose><geometry><box><size>0.7 0.7 0.7</size></box></geometry></collision>
+      </link>
+    </model>
+
+  </world>
+</sdf>

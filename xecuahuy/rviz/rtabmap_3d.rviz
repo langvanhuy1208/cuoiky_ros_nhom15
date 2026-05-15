@@ -1,0 +1,46 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Class: rviz_default_plugins/Grid
+      Name: Grid
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Topic:
+        Value: /robot_description
+    
+    # Bản đồ 2D phẳng
+    - Alpha: 0.7
+      Class: rviz_default_plugins/Map
+      Name: Map 2D
+      Topic:
+        Value: /map
+        Reliability Policy: Best Effort
+
+    # Bản đồ 3D CẦU VỒNG (Giống video Youtube)
+    - Alpha: 1
+      Class: rviz_default_plugins/PointCloud2
+      Name: RTABMap 3D Rainbow
+      Topic:
+        Value: /rtabmap/cloud_map
+        Reliability Policy: Best Effort
+      Style: Boxes
+      Size (m): 0.05
+      Color Transformer: AxisColor
+      Axis: Z
+      Use Rainbow: true
+
+    - Class: rviz_default_plugins/TF
+      Name: TF
+
+  Global Options:
+    Background Color: 30; 30; 30
+    Fixed Frame: map
+
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Name: Current View
